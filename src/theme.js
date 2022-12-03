@@ -1,8 +1,16 @@
 const theme = {
+  breakpoints: {
+    values: {
+      sm: 375,
+      md: 834,
+      lg: 1280,
+    },
+  },
   palette: {
     common: {
       white: "#FFFFFF",
       black: "#000",
+      gray: "#CCCCCC"
     },
     primary: {
       main: "#54bfcf"
@@ -48,8 +56,6 @@ const theme = {
     caption: {
       fontSize: 12
     }
-  },
-  textField: {
   },
 }
 

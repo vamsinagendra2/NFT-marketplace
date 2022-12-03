@@ -15,38 +15,38 @@ const NavBarContainer = styled('div')(({ theme }) => ({
   position: "relative"
 }));
 
-const LogoContainer = styled('div')(({ theme }) => ({
+export const LogoContainer = styled('div')(({ theme }) => ({
   minWidth: 253,
   height: 32,
   display: 'flex',
   alignItems: "center",
   marginLeft: 50,
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     width: 183,
     height: 24,
   },
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     width: 183,
     height: 32,
     marginLeft: 30,
   },
 }));
 
-const LogoIcon = styled('img')(({ theme }) => ({
+export const LogoIcon = styled('img')(({ theme }) => ({
   width: 32,
   height: 32,
   marginRight: 16,
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     width: 24,
     height: 24,
     marginRight: 9,
   }
 }));
 
-const LogoTitle = styled(Typography)(({ theme }) => ({
+export const LogoTitle = styled(Typography)(({ theme }) => ({
   fontFamily: theme.typography.secondary,
   color: theme.palette.common.white,
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.down("lg")]: {
     fontSize: 16
   }
 }));
@@ -91,7 +91,7 @@ const BurgerIcon = styled('img')(({theme})=>({
   width: 24,
   height: 24,
   position: "absolute",
-  right: "25px",
+  right: "55px",
   [theme.breakpoints.up("lg")]: {
     display: "none"
   },
@@ -127,7 +127,7 @@ export default function NavBar() {
         }
         <IconButtonStyled
           icon={user}
-          iconGap={12}
+          icongap={12}
           text={"Sign Up"}
         />
       </LinkContainer>
