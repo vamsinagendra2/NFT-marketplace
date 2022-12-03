@@ -10,26 +10,37 @@ const MainContent = styled('div')(({ theme }) => ({
   height: 691,
   display: "flex",
   justifyContent: "space-between",
-  // [theme.breakpoints.down("lg")]: {
-  //   width: 690,
-  //   height: 542,
-  //   flexDirection: "column",
-  // },
-  // [theme.breakpoints.down("md")]: {
-  //   width: 315,
-  //   height: 633,
-  // }
+  [theme.breakpoints.down("md")]: {
+    width: 375,
+    height: 707,
+    flexDirection: "column",
+    margin: "0px auto"
+  },
 }));
 
-const Image = styled('img')(({ theme }) => ({
+const Image = styled('div')(({ theme }) => ({
   width: "48%",
-  height: "100%"
+  backgroundImage: `url(${create})`,
+  backgroundRepeat: "no-repeat",
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  height: "100%",
+  [theme.breakpoints.down("md")]: {
+    backgroundSize: "375px",
+    width: 375,
+    height: 232,
+  },
 }));
 
 const FormContainer = styled('div')(({ theme }) => ({
   width: "48%",
   height: "100%",
   // border: "1px solid white",
+  [theme.breakpoints.down("md")]: {
+    margin: "0px auto",
+    width: 325,
+    padding: 25
+  },
 }));
 
 const HeadingContainer = styled('div')(({ theme }) => ({
@@ -37,36 +48,60 @@ const HeadingContainer = styled('div')(({ theme }) => ({
   height: 146,
   marginTop: 100,
   marginBottom: 40,
+  [theme.breakpoints.down("md")]: {
+    width: 315,
+    height: 110,
+    marginTop: 20,
+    marginBottom: 30,
+  },
 }));
 const Heading = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.white,
   fontFamily: theme.typography.default,
   fontWeight: 600,
+  [theme.breakpoints.down("md")]: {
+    fontSize: 38
+  },
 }));
 const Caption = styled(Typography)(({ theme }) => ({
   marginTop: 20,
   color: theme.palette.common.white,
   fontFamily: theme.typography.default,
-  fontWeight: 400
+  fontWeight: 400,
+  [theme.breakpoints.down("md")]: {
+    fontSize: 16
+  },
 }));
 const TextInput = styled(InputBase)(({ theme }) => ({
   width: 330,
   height: 46,
   paddingTop: 8,
   display: "block",
-  marginBottom: 15
+  marginBottom: 15,
+  [theme.breakpoints.down("lg")]: {
+    width: 325,
+  },
+  [theme.breakpoints.down("md")]: {
+    width: 315,
+  },
 }));
 
 const SignUpButton = styled(Button)(({ theme }) => ({
   width: 330,
   height: 46,
   marginTop: 15,
+  [theme.breakpoints.down("lg")]: {
+    width: 325,
+  },
+  [theme.breakpoints.down("md")]: {
+    width: 315,
+  },
 }));
 
 export default function CreateAccount() {
   return (
     <PageShell>
-      {/* <MainContent>
+      <MainContent>
         <Image src={create} />
         <FormContainer>
           <HeadingContainer>
@@ -79,7 +114,7 @@ export default function CreateAccount() {
           <TextInput placeholder="Confirm Password"/>
           <SignUpButton>Create account</SignUpButton>
         </FormContainer>
-      </MainContent> */}
+      </MainContent>
     </PageShell>
   )
 }

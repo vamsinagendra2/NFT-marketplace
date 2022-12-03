@@ -91,7 +91,7 @@ const BurgerIcon = styled('img')(({theme})=>({
   width: 24,
   height: 24,
   position: "absolute",
-  right: "55px",
+  right: "35px",
   [theme.breakpoints.up("lg")]: {
     display: "none"
   },
