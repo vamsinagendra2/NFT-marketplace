@@ -8,6 +8,9 @@ const MuiStyledButton = styled(MuiButton)(({ theme }) => ({
   backgroundColor: theme.palette.background.tertiary,
   fontFamily: theme.typography.default,
   textTransform: 'none',
+  "&:hover": {
+    backgroundColor: theme.palette.background.tertiary,
+  }
 }));
 
 const StyledImg = styled('img')(({ theme }) => ({
@@ -17,7 +20,8 @@ const StyledImg = styled('img')(({ theme }) => ({
 
 const StyledTypograpy = styled(Typography)(({ theme }) => ({
   alignItems: "center",
-  fontWeight: 600
+  fontWeight: 600,
+  marginLeft: 10
 }));
 
 const IconButton = ({ children, ...props }) => (
