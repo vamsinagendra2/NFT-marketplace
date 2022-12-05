@@ -193,7 +193,8 @@ const ProfileCategoryImg = styled('img')(({ theme }) => ({
 }));
 const ProfileCategory = styled(Caption)(({ theme }) => ({
   margin: 0,
-  marginLeft: 12
+  marginLeft: 12,
+  fontSize: 16
 }));
 
 const MobileProfileCard = styled(CardContainer)(({ theme }) => ({

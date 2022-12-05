@@ -5,7 +5,7 @@ import user from "../assets/icons/user.png"
 import store from "../assets/icons/store.png"
 import burger from "../assets/icons/burger.png"
 import IconButton from "../baseComponents/IconButton"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const NavBarContainer = styled('div')(({ theme }) => ({
   width: "100%",
@@ -21,6 +21,7 @@ export const LogoContainer = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: "center",
   marginLeft: 50,
+  cursor: "pointer",
   [theme.breakpoints.down("lg")]: {
     width: 183,
     height: 24,
@@ -105,15 +106,20 @@ export default function NavBar() {
     route: "/"
   }, {
     name: "Rankings",
-    route: "/"
+    route: "/rankings"
   }, {
-    name: "Connect a wallet",
-    route: "/"
+    name: "Nft Page",
+    route: "/nft"
   }]
+
+  const navigate = useNavigate();
+
+  const handleSignUp = () => navigate("/create");
+  const handleHome = () => navigate("/");
 
   return (
     <NavBarContainer>
-      <LogoContainer>
+      <LogoContainer onClick={handleHome}>
         <LogoIcon src={store} />
         <LogoTitle variant="h5">NFT Marketplace</LogoTitle>
       </LogoContainer>
@@ -129,6 +135,7 @@ export default function NavBar() {
           icon={user}
           icongap={12}
           text={"Sign Up"}
+          onClick={handleSignUp}
         />
       </LinkContainer>
       <BurgerIcon src={burger}/>

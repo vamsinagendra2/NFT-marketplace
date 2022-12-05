@@ -164,7 +164,7 @@ function Trending({ windowSize }) {
   const [trends, setTrends] = useState(initTrends);
 
   useEffect(() => {
-    console.log(windowSize)
+
     if(windowSize.innerWidth > 1280){
       // 
     }else if(windowSize.innerWidth > 834){
@@ -172,7 +172,7 @@ function Trending({ windowSize }) {
     }else {
       initTrends.splice(1)
     }
-    console.log(initTrends);
+
     setTrends(initTrends);
   }, [windowSize])
 

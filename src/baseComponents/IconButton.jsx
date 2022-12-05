@@ -26,7 +26,9 @@ const StyledTypograpy = styled(Typography)(({ theme }) => ({
 
 const IconButton = ({ children, ...props }) => (
   <MuiStyledButton {...props}>
-    <StyledImg src={props.icon} alt="" style={{ marginRight: props.icongap }}/>
+    {
+      props.icon ? <StyledImg src={props.icon} alt="" style={{ marginRight: props.icongap }}/> : <></>
+    }
     <StyledTypograpy variant='body1'>
       {props.text}
     </StyledTypograpy>
